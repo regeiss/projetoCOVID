@@ -11,19 +11,19 @@ struct TimelineModel: Codable, Hashable
 {
     let pais: String
     let provincia: [String]
-    let linhatempo: TimelineInfoModel
+    let linhatempo: LinhaTempoInfoModel
 }
 
 struct LinhaTempoInfoModel: Codable, Hashable 
 {
-    let cases, deaths, recovered: [String: Int]
+    let casos, mortes, recuperados: [String: Int]
 }
 
 struct LinhaTempoData 
 {
     var pais: String
-    var casesTimeline: Array<(key: Date, value: Int)>
-    var deathsTimeline: Array<(key: Date, value: Int)>
+    var casosLinhaTempo: Array<(key: Date, value: Int)>
+    var mortesLinhaTempo: Array<(key: Date, value: Int)>
 }
 
 struct DiarioModel: Hashable 
