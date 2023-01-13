@@ -4,24 +4,32 @@
 //
 //  Created by Roberto Edgar Geiss on 15/11/22.
 //
-
 import SwiftUI
 
-struct ContentView: View
+struct ContentView: View 
 {
-    let frame = TabularData()
-    var body: some View
+    var body: some View 
     {
-        VStack
+        TabView 
         {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-           
+            TotalStatsView()
+                .tabItem({
+                    Image(systemName: "person.3.fill")
+                    Text("Total Stats")
+                })
+            WorldMapView()
+                .tabItem({
+                    Image(systemName: "map.fill")
+                    Text("Map")
+                })
+            CountryListView()
+                .tabItem({
+                    Image(systemName: "list.dash")
+                    Text("Countries")
+                })
         }
-        .padding()
-        .onAppear {frame.imprimir()}
+        .edgesIgnoringSafeArea(.top)
+        .accentColor(Color.primary)
     }
 }
 
