@@ -24,7 +24,7 @@ struct MundialModel: Codable, Hashable
         } 
         else 
         {
-            return "\(casos.numberFormat())\n" + "\(((Double(casos) * 100) / Double(population)).rounded(by: 2))% of the population"
+            return "\(casos.numberFormat())\n" + "\(((Double(casos) * 100) / Double(populacao)).rounded(by: 2))% of the population"
         }
     }
     
@@ -48,7 +48,7 @@ struct MundialModel: Codable, Hashable
         } 
         else 
         {
-            return "\(active.numberFormat())\n" + "\(((Double(active) * 100) / Double(population)).rounded(by: 2))% da população"
+            return "\(ativos.numberFormat())\n" + "\(((Double(ativos) * 100) / Double(populacao)).rounded(by: 2))% da população"
         }
     }
     

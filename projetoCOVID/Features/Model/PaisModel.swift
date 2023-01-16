@@ -49,13 +49,13 @@ struct PaisModel: Codable, Hashable
     
     var statOfCases: String 
     {
-        if cases == 0 
+        if casos == 0
         {
             return "N/A\n"
         } 
         else 
         {
-            return "\(cases.numberFormat())\n" + "\(((Double(cases) * 100) / Double(populacao)).rounded(by: 2))% of the populacao"
+            return "\(casos.numberFormat())\n" + "\(((Double(casos) * 100) / Double(populacao)).rounded(by: 2))% of the populacao"
         }
     }
     
@@ -67,7 +67,7 @@ struct PaisModel: Codable, Hashable
         } 
         else 
         {
-            return "\(mortes.numberFormat())\n" + "\(((Double(mortes) * 100) / Double(cases)).rounded(by: 2))% of total cases"
+            return "\(mortes.numberFormat())\n" + "\(((Double(mortes) * 100) / Double(casos)).rounded(by: 2))% of total cases"
         }
     }
     
@@ -91,7 +91,7 @@ struct PaisModel: Codable, Hashable
         } 
         else 
         {
-            return "\(recuperados.numberFormat())\n" + "\(((Double(recuperados) * 100) / Double(cases)).rounded(by: 2))% of total cases"
+            return "\(recuperados.numberFormat())\n" + "\(((Double(recuperados) * 100) / Double(casos)).rounded(by: 2))% of total cases"
         }
     }
 }
@@ -118,7 +118,7 @@ struct AnotationModel: Codable, Identifiable
     var name: String
     var latitude: Double
     var longitude: Double
-    var cases: Int
+    var casos: Int
     var mortes: Int
     
     // MARK: - Anotation Model Computed Properties

@@ -12,17 +12,17 @@ struct ContentView: View
     {
         TabView 
         {
-            TotalStatsView()
+            EstatisticasTotalView()
                 .tabItem({
                     Image(systemName: "person.3.fill")
                     Text("Total Stats")
                 })
-            WorldMapView()
+            MapaMundiView()
                 .tabItem({
                     Image(systemName: "map.fill")
                     Text("Map")
                 })
-            CountryListView()
+            PaisListaView()
                 .tabItem({
                     Image(systemName: "list.dash")
                     Text("Countries")

@@ -15,6 +15,10 @@
 		E121D82A2971888800BAA819 /* MapaMundiViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E121D8292971888800BAA819 /* MapaMundiViewModel.swift */; };
 		E121D82C2971893700BAA819 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E121D82B2971893700BAA819 /* NetworkManager.swift */; };
 		E121D82E297189A300BAA819 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E121D82D297189A300BAA819 /* Extension.swift */; };
+		E121D8312974402D00BAA819 /* EstatisticasTotalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E121D8302974402D00BAA819 /* EstatisticasTotalView.swift */; };
+		E121D8332974408000BAA819 /* MapaMundiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E121D8322974408000BAA819 /* MapaMundiView.swift */; };
+		E121D835297440AD00BAA819 /* PaisListaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E121D834297440AD00BAA819 /* PaisListaView.swift */; };
+		E121D83729758CBD00BAA819 /* MapaMundiAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E121D83629758CBD00BAA819 /* MapaMundiAnnotation.swift */; };
 		E1E5AF7F292408A1006C0197 /* projetoCOVIDApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E5AF7E292408A1006C0197 /* projetoCOVIDApp.swift */; };
 		E1E5AF81292408A1006C0197 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E5AF80292408A1006C0197 /* ContentView.swift */; };
 		E1E5AF83292408A5006C0197 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1E5AF82292408A5006C0197 /* Assets.xcassets */; };
@@ -32,6 +36,10 @@
 		E121D8292971888800BAA819 /* MapaMundiViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapaMundiViewModel.swift; sourceTree = "<group>"; };
 		E121D82B2971893700BAA819 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		E121D82D297189A300BAA819 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		E121D8302974402D00BAA819 /* EstatisticasTotalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstatisticasTotalView.swift; sourceTree = "<group>"; };
+		E121D8322974408000BAA819 /* MapaMundiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapaMundiView.swift; sourceTree = "<group>"; };
+		E121D834297440AD00BAA819 /* PaisListaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaisListaView.swift; sourceTree = "<group>"; };
+		E121D83629758CBD00BAA819 /* MapaMundiAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapaMundiAnnotation.swift; sourceTree = "<group>"; };
 		E1E5AF7B292408A1006C0197 /* projetoCOVID.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = projetoCOVID.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1E5AF7E292408A1006C0197 /* projetoCOVIDApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = projetoCOVIDApp.swift; sourceTree = "<group>"; };
 		E1E5AF80292408A1006C0197 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -73,7 +81,8 @@
 		E121D81829717D4100BAA819 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				E121D8202971862B00BAA819 /* Components */,
+				E121D82F2974401100BAA819 /* Principal */,
+				E121D8202971862B00BAA819 /* Componentes */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -86,13 +95,14 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		E121D8202971862B00BAA819 /* Components */ = {
+		E121D8202971862B00BAA819 /* Componentes */ = {
 			isa = PBXGroup;
 			children = (
 				E121D823297187FE00BAA819 /* Button.swift */,
 				E121D8252971881E00BAA819 /* Label.swift */,
+				E121D83629758CBD00BAA819 /* MapaMundiAnnotation.swift */,
 			);
-			path = Components;
+			path = Componentes;
 			sourceTree = "<group>";
 		};
 		E121D821297186E600BAA819 /* Base */ = {
@@ -112,6 +122,16 @@
 				E121D81829717D4100BAA819 /* View */,
 			);
 			path = Features;
+			sourceTree = "<group>";
+		};
+		E121D82F2974401100BAA819 /* Principal */ = {
+			isa = PBXGroup;
+			children = (
+				E121D8302974402D00BAA819 /* EstatisticasTotalView.swift */,
+				E121D8322974408000BAA819 /* MapaMundiView.swift */,
+				E121D834297440AD00BAA819 /* PaisListaView.swift */,
+			);
+			path = Principal;
 			sourceTree = "<group>";
 		};
 		E1E5AF72292408A1006C0197 = {
@@ -241,8 +261,12 @@
 				E121D81B297181F000BAA819 /* MundialModel.swift in Sources */,
 				E121D82C2971893700BAA819 /* NetworkManager.swift in Sources */,
 				E121D82E297189A300BAA819 /* Extension.swift in Sources */,
+				E121D835297440AD00BAA819 /* PaisListaView.swift in Sources */,
 				E1E5AF81292408A1006C0197 /* ContentView.swift in Sources */,
+				E121D8332974408000BAA819 /* MapaMundiView.swift in Sources */,
+				E121D83729758CBD00BAA819 /* MapaMundiAnnotation.swift in Sources */,
 				E1E5AF9129245E61006C0197 /* TabularData.swift in Sources */,
+				E121D8312974402D00BAA819 /* EstatisticasTotalView.swift in Sources */,
 				E1E5AF7F292408A1006C0197 /* projetoCOVIDApp.swift in Sources */,
 				E121D82A2971888800BAA819 /* MapaMundiViewModel.swift in Sources */,
 				E121D8262971881E00BAA819 /* Label.swift in Sources */,
