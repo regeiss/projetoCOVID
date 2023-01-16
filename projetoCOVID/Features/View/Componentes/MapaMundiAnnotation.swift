@@ -7,17 +7,20 @@
 
 import SwiftUI
 
-struct MapaMundiAnnotation: View {
-
+struct MapaMundiAnnotation: View 
+{
         @State private var animation: Double = 0.0
         
         let countryName: String
         let cases: Int
         let deaths: Int
         
-        var body: some View {
-            VStack(alignment: .center, spacing: 2) {
-                ZStack {
+        var body: some View 
+        {
+            VStack(alignment: .center, spacing: 2) 
+            {
+                ZStack 
+                {
                     Circle()
                         .fill(Color.black)
                         .frame(width: 29, height: 29)
@@ -36,23 +39,23 @@ struct MapaMundiAnnotation: View {
                         .accentColor(Color.red)
                         .shadow(color: Color(.black), radius: 2, x: 2, y: 2)
                 }
-                .onAppear {
-                    withAnimation(Animation.easeIn(duration: 2)) {
-                        animation = 1
-                    }
-                }
+                .onAppear { withAnimation(Animation.easeIn(duration: 2)) { animation = 1 }}
                 
-                VStack {
-                    HStack(alignment: .top , spacing: 0) {
-                        Text("Cases")
+                VStack 
+                {
+                    HStack(alignment: .top , spacing: 0) 
+                    {
+                        Text("Casos")
                             .frame(width: 50, height: 20, alignment: .leading)
                             .padding(.leading, 2)
                         Text("\(cases.numberFormat())")
                             .frame(width: 66, height: 20, alignment: .trailing)
                             .padding(.trailing, 2)
                     }
-                    HStack(alignment: .top , spacing: 0) {
-                        Text("Deaths")
+                    
+                    HStack(alignment: .top , spacing: 0) 
+                    {
+                        Text("Mortes")
                             .frame(width: 50, height: 20, alignment: .leading)
                             .padding(.leading, 2)
                         Text("\(deaths.numberFormat())")
@@ -69,3 +72,4 @@ struct MapaMundiAnnotation: View {
             .frame(width: 118, height: 80)
         }
     }
+}
