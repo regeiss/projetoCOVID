@@ -10,7 +10,6 @@ import MapKit
 
 struct MapaMundiView: View
 {
- 
     @StateObject var viewModel = MapaMundiViewModel()
     
     var body: some View
@@ -23,12 +22,9 @@ struct MapaMundiView: View
                     MapaMundiAnnotation(countryName: country.name.lowercased(), cases: country.casos, deaths: country.mortes)
                 }
             })
-            .onAppear(perform: {
-                viewModel.getData()
-            })
-                .navigationBarTitle("World Map", displayMode: .inline)
+            .onAppear(perform: { viewModel.getData()})
+            .navigationBarTitle("World Map", displayMode: .inline)
         }
         .navigationViewStyle(StackNavigationViewStyle())
-        
     }
 }
