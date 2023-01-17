@@ -7,20 +7,16 @@
 
 import SwiftUI
 
-//struct OKXMarkButton: View
-//{
-//    var body: some View
-//    {
-//        ZStack
-//        {
-//            Circle()
-//                .frame(width: 30, height: 30)
-//                .foregroundColor(.secondary)
-//                .opacity(0.2)
-//            Image(systemName: "xmark")
-//                .imageScale(.small)
-//                .frame(width: 34, height: 34)
-//                .foregroundColor(.primary)
-//        }
-//    }
-//}
+struct OKTitleLabel: View 
+{
+    var title: String
+    var fontSize: CGFloat
+    var fontWeight: Font.Weight
+    
+    var body: some View 
+    {
+        Text(title)
+            .font(.system(size: fontSize, weight: fontWeight, design: .serif))
+            .shadow(color: .secondary, radius: 0.5, x: 0.3, y: 0.3)
+    }
+}
