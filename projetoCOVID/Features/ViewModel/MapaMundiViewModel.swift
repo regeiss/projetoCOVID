@@ -30,9 +30,9 @@ final class MapaMundiViewModel: ObservableObject
                 
                 for item in countriesData
                 {
-                    if item.casos > 1000
+                    if item.cases > 1000
                     {
-                        anotationsData.append(AnotationModel(name: item.pais, latitude: item.paisInfo.lat ?? 0, longitude: item.paisInfo.long ?? 0, casos: item.casos, mortes: item.mortes))
+                        anotationsData.append(AnotationModel(name: item.country, latitude: item.countryInfo.lat ?? 0, longitude: item.countryInfo.long ?? 0, casos: item.cases, mortes: item.deaths))
                     }
                 }
             }

@@ -10,38 +10,38 @@ import MapKit
 
 struct PaisModel: Codable, Hashable 
 {
-    let pais: String
-    let paisInfo: PaisInfo
-    let populacao: Int
-    let atualizado: Double
-    let testes: Int
-    let casos: Int
-    let ativos: Int
-    let mortes: Int
-    let recuperados: Int
+    let country : String
+       let countryInfo : PaisInfo
+       let population : Int
+       let updated : Double
+       let tests : Int
+       let cases : Int
+       let active : Int
+       let deaths : Int
+       let recovered : Int
     
     // MARK: - Pais Model Computed Properties
     var paisName: String 
     {
         var denominacao = ""
-        if pais == "USA" 
+        if country == "USA"
         {
             denominacao = "United States of America"
         } 
-        else if pais == "UK" 
+        else if country == "UK"
         {
             denominacao = "United Kingdom"
         } 
         else 
         {
-            denominacao = pais
+            denominacao = country
         }
         return denominacao
     }
     
     var atualizadoLblText: String 
     {
-        let converted   = (atualizado / 1000).getDateFromTimeStamp()
+        let converted   = (updated / 1000).getDateFromTimeStamp()
         let dateLblText = "última atualização: " + converted + " (GMT)"
         
         return dateLblText
@@ -49,49 +49,49 @@ struct PaisModel: Codable, Hashable
     
     var statOfCases: String 
     {
-        if casos == 0
+        if cases == 0
         {
             return "N/A\n"
         } 
         else 
         {
-            return "\(casos.numberFormat())\n" + "\(((Double(casos) * 100) / Double(populacao)).rounded(by: 2))% of the populacao"
+            return "\(cases.numberFormat())\n" + "\(((Double(cases) * 100) / Double(population)).rounded(by: 2))% of the populacao"
         }
     }
     
     var statOfMortes: String 
     {
-        if mortes == 0 
+        if deaths == 0
         {
             return "N/A\n"
         } 
         else 
         {
-            return "\(mortes.numberFormat())\n" + "\(((Double(mortes) * 100) / Double(casos)).rounded(by: 2))% of total cases"
+            return "\(deaths.numberFormat())\n" + "\(((Double(deaths) * 100) / Double(cases)).rounded(by: 2))% of total cases"
         }
     }
     
     var statOfAtivos: String 
     {
-        if recuperados == 0 
+        if recovered == 0
         {
             return "N/A\n"
         } 
         else 
         {
-            return "\(ativos.numberFormat())\n" + "\(((Double(ativos) * 100) / Double(populacao)).rounded(by: 2))% of the populacao"
+            return "\(active.numberFormat())\n" + "\(((Double(active) * 100) / Double(population)).rounded(by: 2))% of the populacao"
         }
     }
     
     var statOfRecuperados: String 
     {
-        if recuperados == 0 
+        if recovered == 0
         {
             return "N/A\n"
         } 
         else 
         {
-            return "\(recuperados.numberFormat())\n" + "\(((Double(recuperados) * 100) / Double(casos)).rounded(by: 2))% of total cases"
+            return "\(recovered.numberFormat())\n" + "\(((Double(recovered) * 100) / Double(cases)).rounded(by: 2))% of total cases"
         }
     }
 }
