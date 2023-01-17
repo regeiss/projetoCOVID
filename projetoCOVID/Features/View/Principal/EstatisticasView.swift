@@ -7,9 +7,38 @@
 
 import SwiftUI
 
-struct EstatisticasView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+struct EstatisticasView: View 
+{
+    @State var country: String
+    @State var countryModel: CountryModel
+    
+    var body: some View 
+    {
+        NavigationView  
+        {
+            ScrollView 
+            {
+                VStack 
+                {
+                    CountryInfoForm(countryModel: countryModel)
+                    
+                    Divider()
+                        .frame(height: 4)
+                        .background(Color(.systemGray2))
+                    
+                    InsetMapView()
+                    
+                    Divider()
+                        .frame(height: 4)
+                        .background(Color(.systemGray2))
+                    
+                    DailyStatsList(country: country)
+                }
+            }
+            .padding(0)
+            .navigationBarTitle("About " + country, displayMode: .inline)
+        }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
