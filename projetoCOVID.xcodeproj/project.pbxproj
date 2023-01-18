@@ -26,6 +26,8 @@
 		E121D842297632E200BAA819 /* PaisDetalheView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E121D841297632E200BAA819 /* PaisDetalheView.swift */; };
 		E121D8442976331600BAA819 /* PaisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E121D8432976331600BAA819 /* PaisView.swift */; };
 		E121D8462976336200BAA819 /* EstatisticasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E121D8452976336200BAA819 /* EstatisticasView.swift */; };
+		E121D84829780D3000BAA819 /* Outros.swift in Sources */ = {isa = PBXBuildFile; fileRef = E121D84729780D3000BAA819 /* Outros.swift */; };
+		E121D84A29780D7900BAA819 /* Forms.swift in Sources */ = {isa = PBXBuildFile; fileRef = E121D84929780D7900BAA819 /* Forms.swift */; };
 		E1E5AF7F292408A1006C0197 /* projetoCOVIDApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E5AF7E292408A1006C0197 /* projetoCOVIDApp.swift */; };
 		E1E5AF81292408A1006C0197 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E5AF80292408A1006C0197 /* ContentView.swift */; };
 		E1E5AF83292408A5006C0197 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1E5AF82292408A5006C0197 /* Assets.xcassets */; };
@@ -55,6 +57,8 @@
 		E121D841297632E200BAA819 /* PaisDetalheView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaisDetalheView.swift; sourceTree = "<group>"; };
 		E121D8432976331600BAA819 /* PaisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaisView.swift; sourceTree = "<group>"; };
 		E121D8452976336200BAA819 /* EstatisticasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstatisticasView.swift; sourceTree = "<group>"; };
+		E121D84729780D3000BAA819 /* Outros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Outros.swift; sourceTree = "<group>"; };
+		E121D84929780D7900BAA819 /* Forms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forms.swift; sourceTree = "<group>"; };
 		E1E5AF7B292408A1006C0197 /* projetoCOVID.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = projetoCOVID.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1E5AF7E292408A1006C0197 /* projetoCOVIDApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = projetoCOVIDApp.swift; sourceTree = "<group>"; };
 		E1E5AF80292408A1006C0197 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -120,6 +124,8 @@
 				E121D823297187FE00BAA819 /* Button.swift */,
 				E121D8252971881E00BAA819 /* Label.swift */,
 				E121D83629758CBD00BAA819 /* MapaMundiAnnotation.swift */,
+				E121D84729780D3000BAA819 /* Outros.swift */,
+				E121D84929780D7900BAA819 /* Forms.swift */,
 			);
 			path = Componentes;
 			sourceTree = "<group>";
@@ -280,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E121D824297187FE00BAA819 /* Button.swift in Sources */,
+				E121D84829780D3000BAA819 /* Outros.swift in Sources */,
 				E121D81F2971821B00BAA819 /* PaisModel.swift in Sources */,
 				E121D83C2976321500BAA819 /* EstatisticasTotalViewModel.swift in Sources */,
 				E121D81B297181F000BAA819 /* MundialModel.swift in Sources */,
@@ -299,6 +306,7 @@
 				E121D82A2971888800BAA819 /* MapaMundiViewModel.swift in Sources */,
 				E121D83A297631C800BAA819 /* MockData.swift in Sources */,
 				E121D8262971881E00BAA819 /* Label.swift in Sources */,
+				E121D84A29780D7900BAA819 /* Forms.swift in Sources */,
 				E121D81D2971820300BAA819 /* LinhaTempoModel.swift in Sources */,
 				E121D842297632E200BAA819 /* PaisDetalheView.swift in Sources */,
 			);
