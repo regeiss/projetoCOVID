@@ -118,33 +118,43 @@ struct CountryStatsCard: View
     }
 }
 
-struct WorldStatsCard: View {
+struct WorldStatsCard: View 
+{
     var worldData: MundialModel
         
-    var body: some View {
-        VStack(spacing: 0) {
+    var body: some View 
+    {
+        VStack(spacing: 0) 
+        {
             Text("WORLD STATS")
                 .font(.system(.largeTitle, design: .serif))
                 .fontWeight(.black)
                 .shadow(color: .secondary, radius: 1, x: 0.7, y: 0.7)
             
-            ZStack {
-                VStack(spacing: 20) {
+            ZStack 
+            {
+                VStack(spacing: 20) 
+                {
                     Text("Population: \(worldData.population.numberFormat())")
                         .font(.system(size: 17, design: .serif))
                         .fontWeight(.light)
                         .shadow(color: Color(.darkGray), radius: 1, x: 0.7, y: 0.7)
                         .foregroundColor(Color(.label))
                         .padding(.top, 5)
-                    VStack(alignment: .center, spacing: 20) {
-                        HStack() {
+                
+                    VStack(alignment: .center, spacing: 20) 
+                    {
+                        HStack() 
+                        {
                             OKStatCard(title: "Cases", subTitle: worldData.statOfCases)
                                 .padding(.leading, 5)
                             Spacer()
                             OKStatCard(title: "Deaths", subTitle: worldData.statOfDeaths)
                                 .padding(.trailing, 5)
                         }
-                        HStack() {
+
+                        HStack() 
+                        {
                             OKStatCard(title: "Active", subTitle: worldData.statOfActive)
                                 .padding(.leading, 5)
                             Spacer()
@@ -153,7 +163,6 @@ struct WorldStatsCard: View {
                         }
                     }
                     .padding(.vertical, 5)
-                    
                 }
             }
             .background(Color(.systemGray))
@@ -162,4 +171,6 @@ struct WorldStatsCard: View {
         }
     }
 }
+
+
 
