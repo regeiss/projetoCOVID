@@ -29,7 +29,6 @@ struct LinhaTempoData
 struct DiarioModel: Hashable 
 {
     let uuid = UUID()
-
     let dDate: Date
     let dCases: Int
     let dDeaths: Int
