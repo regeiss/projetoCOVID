@@ -30,7 +30,7 @@ struct DiarioModel: Hashable
 {
     let uuid = UUID()
 
-    let dData: Date
-    let dCasos: Int
-    let dMortes: Int
+    let dDate: Date
+    let dCases: Int
+    let dDeaths: Int
 }

@@ -9,12 +9,12 @@ import SwiftUI
 
 struct CountryInfoForm: View 
 {
-    var countryData: CountryModel
+    var countryData: PaisModel
     var body: some View 
     {
         Form 
         {
-            Section(header: Text(countryData.updatedLblText)) 
+            Section(header: Text(countryData.atualizadoLblText))
             {
                 HStack 
                 {
@@ -57,7 +57,7 @@ struct CountryInfoForm: View
 
 struct CountryStatsCard: View 
 {
-    var countryData: CountryModel
+    var countryData: PaisModel
 
     var body: some View 
     {
@@ -73,7 +73,7 @@ struct CountryStatsCard: View
                         .shadow(color: Color(.darkGray), radius: 1, x: 2, y: 2)
                     Spacer()
                     VStack {
-                        Text(countryData.countryName)
+                        Text(countryData.paisName)
                             .font(.system(.title2, design: .serif))
                             .fontWeight(.bold)
                             .foregroundColor(Color(.darkText))
@@ -105,7 +105,7 @@ struct CountryStatsCard: View
                         OKStatCard(title: "Active", subTitle: countryData.statOfActive)
                             .padding(.leading, 5)
                         Spacer()
-                        OKStatCard(title: "Recovered", subTitle: countryData.statOfRocovered)
+                        OKStatCard(title: "Recovered", subTitle: countryData.statOfRecovered)
                             .padding(.trailing, 5)
                     }
                 }
@@ -117,3 +117,49 @@ struct CountryStatsCard: View
         .cornerRadius(13)
     }
 }
+
+struct WorldStatsCard: View {
+    var worldData: MundialModel
+        
+    var body: some View {
+        VStack(spacing: 0) {
+            Text("WORLD STATS")
+                .font(.system(.largeTitle, design: .serif))
+                .fontWeight(.black)
+                .shadow(color: .secondary, radius: 1, x: 0.7, y: 0.7)
+            
+            ZStack {
+                VStack(spacing: 20) {
+                    Text("Population: \(worldData.population.numberFormat())")
+                        .font(.system(size: 17, design: .serif))
+                        .fontWeight(.light)
+                        .shadow(color: Color(.darkGray), radius: 1, x: 0.7, y: 0.7)
+                        .foregroundColor(Color(.label))
+                        .padding(.top, 5)
+                    VStack(alignment: .center, spacing: 20) {
+                        HStack() {
+                            OKStatCard(title: "Cases", subTitle: worldData.statOfCases)
+                                .padding(.leading, 5)
+                            Spacer()
+                            OKStatCard(title: "Deaths", subTitle: worldData.statOfDeaths)
+                                .padding(.trailing, 5)
+                        }
+                        HStack() {
+                            OKStatCard(title: "Active", subTitle: worldData.statOfActive)
+                                .padding(.leading, 5)
+                            Spacer()
+                            OKStatCard(title: "Recovered", subTitle: worldData.statOfRecovered)
+                                .padding(.trailing, 5)
+                        }
+                    }
+                    .padding(.vertical, 5)
+                    
+                }
+            }
+            .background(Color(.systemGray))
+            .cornerRadius(9)
+            .padding(.horizontal, 8)
+        }
+    }
+}
+

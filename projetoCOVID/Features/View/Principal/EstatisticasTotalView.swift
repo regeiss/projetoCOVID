@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct TotalStatsView: View 
+struct EstatisticasTotalView: View
 {
-    @StateObject var viewModel = TotalStatsViewModel()
+    @StateObject var viewModel = EstatisticasTotalViewModel()
     
     var body: some View 
     {

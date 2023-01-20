@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct CountryListView: View 
+struct PaisListaView: View
 {
-    @StateObject var viewModel = CountryListViewModel()
+    @StateObject var viewModel = ListaPaisesViewModel()
     
     @State var searchText = ""
     @State var isSearching = false

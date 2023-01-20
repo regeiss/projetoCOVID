@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PaisView: View 
 {
-    var countryModel: CountryModel
+    var countryModel: PaisModel
     var countryIso: String
     
     @State private var presentVC: Bool = false
@@ -71,6 +71,7 @@ struct PaisView: View
         .frame(width: 340, height: 340, alignment: .center)
         .background(Color(.systemGray))
         .onTapGesture { self.presentVC = true }
-        .sheet(isPresented: self.$presentVC) { DailyStatsVC(country: countryModel.country)}
+        .sheet(isPresented: self.$presentVC)
+        { DailyStatsVC(country: countryModel.paisName)}
     }
 }

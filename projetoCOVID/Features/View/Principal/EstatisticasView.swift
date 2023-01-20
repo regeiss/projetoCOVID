@@ -10,7 +10,8 @@ import SwiftUI
 struct EstatisticasView: View 
 {
     @State var country: String
-    @State var countryModel: CountryModel
+    @State var countryModel: PaisModel
+    @State var diario: [DiarioModel]
     
     var body: some View 
     {
@@ -20,19 +21,19 @@ struct EstatisticasView: View
             {
                 VStack 
                 {
-                    CountryInfoForm(countryModel: countryModel)
+                    CountryInfoForm(countryData: countryModel)
                     
                     Divider()
                         .frame(height: 4)
                         .background(Color(.systemGray2))
                     
-                    InsetMapView()
+                    InsetMapView(countryData: countryModel)
                     
                     Divider()
                         .frame(height: 4)
                         .background(Color(.systemGray2))
                     
-                    DailyStatsList(country: country)
+                    DailyStatsList(dailyData: $diario)
                 }
             }
             .padding(0)

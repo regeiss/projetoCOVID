@@ -59,7 +59,7 @@ struct PaisModel: Codable, Hashable
         }
     }
     
-    var statOfMortes: String 
+    var statOfDeaths: String
     {
         if deaths == 0
         {
@@ -71,7 +71,7 @@ struct PaisModel: Codable, Hashable
         }
     }
     
-    var statOfAtivos: String 
+    var statOfActive: String
     {
         if recovered == 0
         {
@@ -83,7 +83,7 @@ struct PaisModel: Codable, Hashable
         }
     }
     
-    var statOfRecuperados: String 
+    var statOfRecovered: String
     {
         if recovered == 0
         {

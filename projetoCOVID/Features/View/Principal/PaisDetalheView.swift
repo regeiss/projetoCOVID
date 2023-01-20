@@ -10,9 +10,9 @@ import MapKit
 
 struct CountryDetailView: View 
 {
-    @StateObject var viewModel  = CountryDetailViewModel()
+    @StateObject var viewModel  = PaisDetalheViewModel()
     
-    @State var countryData: CountryModel
+    @State var countryData: PaisModel
     @Binding var isShowingDetail: Bool
     
     var body: some View 
@@ -29,7 +29,7 @@ struct CountryDetailView: View
                         .frame(height: 4)
                         .background(Color(.systemGray2))
                     
-                    InsetMap(countryData: countryData, region: MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: countryData.countryInfo.lat ?? 48, longitude: countryData.countryInfo.long ?? 9), span: MKCoordinateSpan(latitudeDelta: 10.0, longitudeDelta: 10.0)))
+                    InsetMapView(countryData: countryData, region: MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: countryData.countryInfo.lat ?? 48, longitude: countryData.countryInfo.long ?? 9), span: MKCoordinateSpan(latitudeDelta: 10.0, longitudeDelta: 10.0)))
                     
                     Divider()
                         .frame(height: 4)
