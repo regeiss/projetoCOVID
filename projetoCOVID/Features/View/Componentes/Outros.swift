@@ -8,12 +8,15 @@
 import SwiftUI
 import MapKit
 
-struct OKStatCard: View {
+struct OKStatCard: View 
+{
     let title: String
     let subTitle: String
     
-    var body: some View {
-        VStack(alignment: .center, spacing: 6) {
+    var body: some View 
+    {
+        VStack(alignment: .center, spacing: 6) 
+        {
             OKTitleLabel(title: title, fontSize: 28, fontWeight: .bold)
             OKTitleLabel(title: subTitle, fontSize: 13, fontWeight: .medium)
                 .lineLimit(2)
@@ -26,12 +29,14 @@ struct OKStatCard: View {
     }
 }
 
-struct InsetMapView: View {
+struct InsetMapView: View 
+{
     var countryData: PaisModel
     
     @State var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 42.8333, longitude: 12.8333), span: MKCoordinateSpan(latitudeDelta: 10.0, longitudeDelta: 10.0))
     
-    var body: some View {
+    var body: some View 
+    {
         Map(coordinateRegion: $region)
             .overlay(
                 ZStack() {
@@ -59,12 +64,15 @@ struct InsetMapView: View {
 }
 
 
-struct DailyStatsList: View {
+struct DailyStatsList: View 
+{
     @Binding var dailyData: [DiarioModel]
     
     var body: some View {
-        VStack {
-            HStack {
+        VStack 
+        {
+            HStack 
+            {
                 Image(systemName: "list.bullet.indent")
                     .foregroundColor(.gray)
                     .imageScale(.large)
@@ -75,10 +83,10 @@ struct DailyStatsList: View {
             }
             .padding(.top, 15)
             .padding(.vertical, 2)
-            Section(header:
-                        OKListRow(textOne: "Date", textTwo: "Cases", textThree: "Deaths", fontSize: 22, fontWeight: .bold, frameWidth: 130)
-            ) {
-                List {
+            Section(header: OKListRow(textOne: "Date", textTwo: "Cases", textThree: "Deaths", fontSize: 22, fontWeight: .bold, frameWidth: 130)) 
+            {
+                List 
+                {
                     ForEach(dailyData, id: \.uuid) { item in
                         OKListRow(textOne: "\(item.dDate.convertToMonthYearFormat())", textTwo: "\(item.dCases.numberFormat())", textThree: "\(item.dDeaths.numberFormat())", fontSize: 18, fontWeight: .medium, frameWidth: 130)
                             .foregroundColor(Color(.secondaryLabel))
@@ -88,12 +96,12 @@ struct DailyStatsList: View {
                 .frame(height: 600, alignment: .top)
             }
             .padding(.horizontal)
-            
-        }
+       }
     }
 }
 
-struct OKListRow: View {
+struct OKListRow: View 
+{
     var textOne: String
     var textTwo: String
     var textThree: String
@@ -102,8 +110,10 @@ struct OKListRow: View {
     var fontWeight: Font.Weight
     var frameWidth: CGFloat
     
-    var body: some View {
-        HStack {
+    var body: some View 
+    {
+        HStack 
+        {
             OKTitleLabel(title: textOne, fontSize: fontSize, fontWeight: fontWeight)
                 .frame(width: frameWidth, alignment: .leading)
             Spacer()
@@ -116,13 +126,17 @@ struct OKListRow: View {
     }
 }
 
-struct OKSearchBar: View {
+struct OKSearchBar: View 
+{
     @Binding var searchText: String
     @Binding var isSearching: Bool
     
-    var body: some View {
-        HStack {
-            HStack {
+    var body: some View 
+    {
+        HStack 
+        {
+            HStack 
+            {
                 TextField("Search countries...", text: $searchText)
                     .padding(.leading, 40)
             }
@@ -134,24 +148,24 @@ struct OKSearchBar: View {
                 isSearching = true
             })
             .overlay(
-                HStack {
+                HStack 
+                {
                     Image(systemName: "magnifyingglass")
                     Spacer()
-                    if isSearching {
-                        Button(action: { searchText = "" }, label: {
-                            Image(systemName: "xmark.circle.fill")
-                        })
+                    if isSearching 
+                    {
+                        Button(action: { searchText = "" }, label: { Image(systemName: "xmark.circle.fill")})
                     }
                 }
                 .padding(.horizontal, 32)
                 .foregroundColor(.gray)
             )
             
-            if isSearching {
+            if isSearching 
+            {
                 Button(action: {
                     isSearching = false
                     searchText  = ""
-                    
                     UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
                 }, label: {
                     Text("Cancel")
@@ -166,15 +180,20 @@ struct OKSearchBar: View {
     }
 }
 
-struct AboutCountryVC: View {
+struct AboutCountryVC: View 
+{
     @State var country: String
     @State var countryModel: PaisModel
     @State var diario: [DiarioModel]
     
-    var body: some View {
-        NavigationView {
-            ScrollView {
-                VStack {
+    var body: some View 
+        {
+        NavigationView 
+        {
+            ScrollView 
+            {
+                VStack 
+                {
                     CountryInfoForm(countryData: countryModel)
                     
                     Divider()
@@ -202,8 +221,11 @@ struct DailyStatsVC: View
     @State var country: String
     //@State var countryModel: PaisModel
     //@State var diario: [DiarioModel]
-    var body: some View {
-        Text(" ")
+    var body: some View 
+    {
+        AboutCountryVC(country: "USA", countryModel: CountryModel(country: "USA", countryInfo: CountryInfo(_id: 840, flag: "", iso2: "US", iso3: "USA", lat: 38, long: -97), population: 331679824, updated: 1604846922098, tests: 156566706, cases: 9934653, active: 3351368, deaths: 241098, recovered: 6342187))
+            .colorScheme(.dark)
     }
 }
+
 
