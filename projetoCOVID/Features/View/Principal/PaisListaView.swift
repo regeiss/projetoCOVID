@@ -68,14 +68,14 @@ struct PaisListaView: View
                                       textThree: "\(country.deaths.numberFormat())",
                                       fontSize: 18,
                                       fontWeight: .medium,
-                                      frameWidth: 130)
+                                      frameWidth: 140)
                                 .foregroundColor(Color(.secondaryLabel))
                                 .onTapGesture { viewModel.selectedCountry = country }
                         }
-                        .listRowInsets(EdgeInsets())
+                        //.listRowInsets(EdgeInsets())
                     }
                 }
-                .padding(.horizontal)
+                //.padding(.horizontal)
                 .onAppear(perform: {
                     UITableView.appearance().showsVerticalScrollIndicator = false
                     viewModel.getCountryListData()

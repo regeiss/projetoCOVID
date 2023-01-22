@@ -32,8 +32,6 @@
 		E1E5AF81292408A1006C0197 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E5AF80292408A1006C0197 /* ContentView.swift */; };
 		E1E5AF83292408A5006C0197 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1E5AF82292408A5006C0197 /* Assets.xcassets */; };
 		E1E5AF86292408A5006C0197 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1E5AF85292408A5006C0197 /* Preview Assets.xcassets */; };
-		E1E5AF8E29240A98006C0197 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = E1E5AF8D29240A98006C0197 /* Networking */; };
-		E1E5AF9129245E61006C0197 /* TabularData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E5AF9029245E61006C0197 /* TabularData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,7 +62,6 @@
 		E1E5AF80292408A1006C0197 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E1E5AF82292408A5006C0197 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E1E5AF85292408A5006C0197 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		E1E5AF9029245E61006C0197 /* TabularData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabularData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +69,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1E5AF8E29240A98006C0197 /* Networking in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,7 +199,6 @@
 		E1E5AF8F29245E43006C0197 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				E1E5AF9029245E61006C0197 /* TabularData.swift */,
 				E121D82B2971893700BAA819 /* NetworkManager.swift */,
 			);
 			path = Service;
@@ -226,7 +221,6 @@
 			);
 			name = projetoCOVID;
 			packageProductDependencies = (
-				E1E5AF8D29240A98006C0197 /* Networking */,
 			);
 			productName = projetoCOVID;
 			productReference = E1E5AF7B292408A1006C0197 /* projetoCOVID.app */;
@@ -257,7 +251,6 @@
 			);
 			mainGroup = E1E5AF72292408A1006C0197;
 			packageReferences = (
-				E1E5AF8C29240A98006C0197 /* XCRemoteSwiftPackageReference "Networking" */,
 			);
 			productRefGroup = E1E5AF7C292408A1006C0197 /* Products */;
 			projectDirPath = "";
@@ -299,7 +292,6 @@
 				E121D83729758CBD00BAA819 /* MapaMundiAnnotation.swift in Sources */,
 				E121D8442976331600BAA819 /* PaisView.swift in Sources */,
 				E121D8402976328A00BAA819 /* PaisDetalheViewModel.swift in Sources */,
-				E1E5AF9129245E61006C0197 /* TabularData.swift in Sources */,
 				E121D8312974402D00BAA819 /* EstatisticasTotalView.swift in Sources */,
 				E121D8462976336200BAA819 /* EstatisticasView.swift in Sources */,
 				E1E5AF7F292408A1006C0197 /* projetoCOVIDApp.swift in Sources */,
@@ -509,25 +501,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		E1E5AF8C29240A98006C0197 /* XCRemoteSwiftPackageReference "Networking" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/freshOS/Networking";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		E1E5AF8D29240A98006C0197 /* Networking */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = E1E5AF8C29240A98006C0197 /* XCRemoteSwiftPackageReference "Networking" */;
-			productName = Networking;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E1E5AF73292408A1006C0197 /* Project object */;
 }

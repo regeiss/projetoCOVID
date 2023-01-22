@@ -76,6 +76,7 @@ struct DailyStatsList: View
                 Image(systemName: "list.bullet.indent")
                     .foregroundColor(.gray)
                     .imageScale(.large)
+                Spacer()
                 Text("Daily Stats")
                     .font(.title3)
                     .fontWeight(.bold)
@@ -83,7 +84,7 @@ struct DailyStatsList: View
             }
             .padding(.top, 15)
             .padding(.vertical, 2)
-            Section(header: OKListRow(textOne: "Date", textTwo: "Cases", textThree: "Deaths", fontSize: 22, fontWeight: .bold, frameWidth: 130)) 
+            Section(header: OKListRow(textOne: "Data", textTwo: "Casos", textThree: "Mortes", fontSize: 22, fontWeight: .bold, frameWidth: 130))
             {
                 List 
                 {
@@ -166,6 +167,7 @@ struct OKSearchBar: View
                 Button(action: {
                     isSearching = false
                     searchText  = ""
+                    withAnimation(.easeIn) {}
                     UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
                 }, label: {
                     Text("Cancel")
@@ -174,7 +176,6 @@ struct OKSearchBar: View
                         .accentColor(Color(.systemGray))
                 })
                 .transition(.move(edge: .trailing))
-                .animation(.easeIn)
             }
         }
     }
@@ -206,7 +207,7 @@ struct AboutCountryVC: View
                         .frame(height: 4)
                         .background(Color(.systemGray2))
                     
-                    DailyStatsList(dailyData: $diario)
+                    DailyStatsList(dailyData: $diario) //
                 }
             }
             .padding(0)
@@ -219,11 +220,11 @@ struct AboutCountryVC: View
 struct DailyStatsVC: View
 {
     @State var country: String
-    //@State var countryModel: PaisModel
-    //@State var diario: [DiarioModel]
+    @State var countryModel: PaisModel
+    @State var diario: [DiarioModel]
     var body: some View 
     {
-        AboutCountryVC(country: "USA", countryModel: CountryModel(country: "USA", countryInfo: CountryInfo(_id: 840, flag: "", iso2: "US", iso3: "USA", lat: 38, long: -97), population: 331679824, updated: 1604846922098, tests: 156566706, cases: 9934653, active: 3351368, deaths: 241098, recovered: 6342187))
+        AboutCountryVC(country: "USA", countryModel: PaisModel(country: "USA", countryInfo: PaisInfo(_id: 840, flag: "", iso2: "US", iso3: "USA", lat: 38, long: -97), population: 331679824, updated: 1604846922098, tests: 156566706, cases: 9934653, active: 3351368, deaths: 241098, recovered: 6342187), diario: diario)
             .colorScheme(.dark)
     }
 }
