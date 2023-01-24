@@ -32,4 +32,4 @@ struct ContentView: View
         .accentColor(Color.primary)
     }
 }
-
+//Color(red: 242 / 255, green: 242 / 255, blue: 242 / 255)
