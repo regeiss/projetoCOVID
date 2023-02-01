@@ -12,6 +12,7 @@ struct ContentView: View
     {
         TabView 
         {
+            Color(red: 242 / 255, green: 242 / 255, blue: 242 / 255)
             EstatisticasTotalView()
                 .tabItem({
                     Image(systemName: "person.3.fill")
@@ -30,6 +31,7 @@ struct ContentView: View
         }
         .edgesIgnoringSafeArea(.top)
         .accentColor(Color.primary)
+
     }
 }
 //Color(red: 242 / 255, green: 242 / 255, blue: 242 / 255)
